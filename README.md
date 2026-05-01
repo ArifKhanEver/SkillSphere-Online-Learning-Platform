@@ -22,8 +22,8 @@ The goal of SkillSphere is to bridge the gap between industry experts and studen
 - **Styling:** Tailwind CSS, DaisyUI / HeroUI
 - **Authentication:** BetterAuth
 - **Icons:** React Icons
-- **Notifications:** React Hot Toast / React Toastify
-- **Animations:** [Mention your chosen package: e.g., Swiper.js / Framer Motion]
+- **Notifications:** React Toastify
+- **Animations:** Swiper.js / Framer Motion
 - **Data Fetching:** Native Fetch API
 
 ## 💻 Prerequisites
@@ -34,7 +34,7 @@ Before running the project locally, ensure you have:
 ## ⚙️ Installation & Local Setup
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/skillsphere.git](https://github.com/your-username/skillsphere.git)
+   git clone [https://github.com/ArifKhanEver/SkillSphere-Online-Learning-Platform](https://github.com/ArifKhanEver/SkillSphere-Online-Learning-Platform)
 
 2. **Navigate to the project directory:**
    ```bash
@@ -62,7 +62,7 @@ Before running the project locally, ensure you have:
 ├── app/               # Next.js App Router (Pages & Routes)
 ├── components/        # Reusable UI Components
 ├── public/            # Static assets and data.json
-├── styles/            # Global styles
+├── lib/               # library files
 ├── utils/             # Helper functions and Auth config
 └── README.md          # Project documentation
 ```
