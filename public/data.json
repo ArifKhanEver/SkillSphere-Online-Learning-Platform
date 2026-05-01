@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "Dr. Angela Yu",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch including HTML, CSS, JavaScript, and React.",
+    "image": "https://i.ibb.co/6R0p9fH/web-dev.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "Mastering UI/UX Design with Figma",
+    "instructor": "Sarah Johnson",
+    "duration": "15 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Master the art of user interface design and prototyping using Figma and Adobe XD.",
+    "image": "https://i.ibb.co/mS6X6nB/ui-ux.jpg",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Masterclass",
+    "instructor": "Robert Smith",
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Social Media Marketing, SEO, and Google Ads strategies for business growth.",
+    "image": "https://i.ibb.co/L5hY8mG/digital-marketing.jpg",
+    "category": "Marketing"
+  },
+  {
+    "id": 4,
+    "title": "Advanced React & Next.js Guide",
+    "instructor": "Maximilian Schwarzmüller",
+    "duration": "25 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Deep dive into React Hooks, Context API, and Server-Side Rendering with Next.js.",
+    "image": "https://i.ibb.co/vYf9z4m/nextjs.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 5,
+    "title": "Python for Data Science",
+    "instructor": "Jose Portilla",
+    "duration": "18 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Learn Python libraries like NumPy, Pandas, and Matplotlib for data analysis.",
+    "image": "https://i.ibb.co/ZxbT4f7/python-data.jpg",
+    "category": "Data Science"
+  },
+  {
+    "id": 6,
+    "title": "Graphic Design for Beginners",
+    "instructor": "Lindsay Marsh",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn the principles of graphic design, typography, and color theory using Photoshop.",
+    "image": "https://i.ibb.co/nC8F6M1/graphic-design.jpg",
+    "category": "Design"
+  },
+  {
+    "id": 7,
+    "title": "Node.js & MongoDB: Backend Masterclass",
+    "instructor": "Andrew Mead",
+    "duration": "22 hours",
+    "rating": 4.8,
+    "level": "Advanced",
+    "description": "Build scalable backend applications using Express, Node.js, and MongoDB.",
+    "image": "https://i.ibb.co/X7P6Z5B/backend.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 8,
+    "title": "Social Media Content Strategy",
+    "instructor": "Gary Vaynerchuk",
+    "duration": "8 hours",
+    "rating": 4.4,
+    "level": "Beginner",
+    "description": "Learn how to create viral content for TikTok, Instagram, and LinkedIn.",
+    "image": "https://i.ibb.co/R2vK9Yq/social-media.jpg",
+    "category": "Marketing"
+  },
+  {
+    "id": 9,
+    "title": "Cyber Security Fundamentals",
+    "instructor": "Nathan House",
+    "duration": "14 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "An introduction to protecting systems, networks, and programs from digital attacks.",
+    "image": "https://i.ibb.co/QvL0M8S/cyber-security.jpg",
+    "category": "IT & Software"
+  },
+  {
+    "id": 10,
+    "title": "Freelancing Success: Start Your Career",
+    "instructor": "Seth Godin",
+    "duration": "6 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Step-by-step guide to starting your freelance journey on Upwork and Fiverr.",
+    "image": "https://i.ibb.co/S3J1X7D/freelancing.jpg",
+    "category": "Business"
+  }
+]
