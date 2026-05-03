@@ -1,129 +1,149 @@
-'use client'
-import Link from 'next/link';
-// import logo from '@/assets/logo.png'
-import Image from 'next/image';
-// import { useForm } from 'react-hook-form';
-// import { authClient } from '@/lib/auth-client';
-import { useState } from 'react';
-import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
-// import { createAuthClient } from 'better-auth/react';
+"use client";
 
+import React from 'react';
+import Link from 'next/link';
+import { FcGoogle } from 'react-icons/fc';
+import { HiOutlineMail, HiOutlineLockClosed } from 'react-icons/hi';
+import { FaCheckCircle, FaPlayCircle, FaUserGraduate } from 'react-icons/fa';
 
 const LoginPage = () => {
-    const authClient = createAuthClient();
+    const handleLogin = (e) => {
+        e.preventDefault();
 
-    const handleGoogleSignin = async () => {
-        const data = await authClient.signIn.social({
-            provider: "google",
-        });
     };
-    const handleGithubSignin = async () => {
-        const data = await authClient.signIn.social({
-            provider: "github"
-        })
-    };
-
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const [visiblePass, setVisiblePass] = useState(false)
-
-
-    const onSubmit = async (data) => {
-
-
-        const { name, photoUrl, email, password, condition } = data;
-
-        const { data: res, error } = await authClient.signIn.email({
-            name, // required
-            email, // required
-            password, // required
-            image: photoUrl,
-            callbackURL: "/",
-        });
-
-    }
 
     return (
-        <div className="bg-slate-50 min-h-screen flex items-center justify-center font-sans px-6">
+        <div className="min-h-screen bg-[#FAF9F6] flex items-center justify-center py-20 px-6">
+            <div className="max-w-[1100px] w-full bg-white rounded-[40px] shadow-2xl shadow-slate-200/60 overflow-hidden flex flex-col md:flex-row border border-slate-100">
 
-            {/* Container with shadow and rounded corners */}
-            <div className="bg-white p-12 md:p-16 rounded-2xl shadow-lg border border-gray-100 max-w-lg w-full my-12">
+                {/* Left Side */}
+                <div className="hidden md:flex md:w-1/2 bg-[#149988] p-12 flex-col justify-between relative overflow-hidden">
 
-                {/* Header/Title */}
-                <div className="text-center mb-10 border-b border-gray-100 pb-8">
-                    <div className="text-6xl font-black uppercase tracking-tighter mb-4">
-                        {/* <Image src={logo} alt='logo' width={300} height={200} className='mx-auto' /> */}
-                    </div>
-                    <h2 className="text-xl font-bold text-slate-800">Login your account</h2>
-                </div>
+                    <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl animate-pulse"></div>
+                    <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F97416]/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
 
-                {/* Login Form */}
-                <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-
-                    {/* Email Input */}
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text font-semibold text-slate-800 text-sm">Email address</span>
-                        </label>
-                        <input
-                            type="email"
-                            placeholder="Enter your email address"
-                            {...register('email', { required: "Email is required" })}
-                            className="input bg-[#F3F3F3] border-none rounded-sm w-full h-14 text-sm text-slate-600 focus:ring-1 focus:ring-red-300"
-
-                        />
-                        {errors.email && <p className='text-red-600 mt-1 text-sm'>{errors.email.message}</p>}
-
+                    <div className="relative z-10">
+                        <h2 className="text-4xl font-black text-white mb-4 tracking-tighter">
+                            Skill<span className="text-[#F97416]">Sphere</span>.
+                        </h2>
+                        <p className="text-teal-50 text-lg font-medium opacity-90 max-w-sm">
+                            Elevate your career with the most in-demand technical skills.
+                        </p>
                     </div>
 
-                    {/* Password Input */}
-                    <div className="form-control relative">
-                        <label className="label">
-                            <span className="label-text font-semibold text-slate-800 text-sm">Password</span>
-                        </label>
-                        <input
-                            type={visiblePass ? "text" : "password"} placeholder="Enter your password"
-                            {...register('password', { required: "Password is required" })}
-                            className="input bg-[#F3F3F3] border-none rounded-sm w-full h-14 text-sm text-slate-600 focus:ring-1 focus:ring-red-300"
+                    <div className="relative z-10 space-y-8 my-10">
+                        <div className="flex items-center gap-5 group">
+                            <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/20 group-hover:bg-[#F97416] transition-all duration-300">
+                                <FaPlayCircle className="text-white" size={24} />
+                            </div>
+                            <div>
+                                <h4 className="text-white font-bold">10k+ Premium Courses</h4>
+                                <p className="text-teal-100/70 text-sm">Learn from industry experts.</p>
+                            </div>
+                        </div>
 
-                        />
-                        <span onClick={() => setVisiblePass(!visiblePass)} className='text-2xl absolute top-10 right-4'>{visiblePass ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>}</span>
-                        {errors.password && <p className='text-red-600 mt-1 text-sm'>{errors.password.message}</p>}
-                        {/* Optional: Forgot Password Link */}
-                        <div className="text-right mt-1">
-                            <Link href="#" className="text-xs text-slate-500 hover:text-red-600">Forgot Password?</Link>
+                        <div className="flex items-center gap-5 group">
+                            <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/20 group-hover:bg-[#F97416] transition-all duration-300">
+                                <FaCheckCircle className="text-white" size={24} />
+                            </div>
+                            <div>
+                                <h4 className="text-white font-bold">Verified Certificates</h4>
+                                <p className="text-teal-100/70 text-sm">Boost your LinkedIn profile.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex items-center gap-5 group">
+                            <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/20 group-hover:bg-[#F97416] transition-all duration-300">
+                                <FaUserGraduate className="text-white" size={24} />
+                            </div>
+                            <div>
+                                <h4 className="text-white font-bold">Expert Mentorship</h4>
+                                <p className="text-teal-100/70 text-sm">Get 1-on-1 support anytime.</p>
+                            </div>
                         </div>
                     </div>
 
-                    {/* Login Button */}
-                    <div className="form-control pt-4">
-                        <button
-                            type="submit"
-                            className="btn bg-[#403F3F] text-white w-full h-14 rounded-sm font-bold text-base hover:bg-red-600 border-none transition-all duration-300 active:scale-95"
-                        >
-                            Login
-                        </button>
+                    <div className="relative z-10 pt-10 border-t border-white/10">
+                        <div className="flex items-center gap-4">
+                            <div className="flex -space-x-3">
+                                {[1, 2, 3, 4].map((i) => (
+                                    <div key={i} className="w-8 h-8 rounded-full border-2 border-[#149988] bg-slate-200 overflow-hidden">
+                                        <img src={`https://i.pravatar.cc/150?u=${i}`} alt="user" />
+                                    </div>
+                                ))}
+                            </div>
+                            <p className="text-white/80 text-xs font-bold">
+                                Joined by <span className="text-[#F97416]">20k+</span> students
+                            </p>
+                        </div>
                     </div>
-                </form>
-
-
-                {/* Register Link */}
-                <div className="text-center pt-6 border-t border-gray-100">
-                    <p className="text-sm text-slate-600 font-medium">
-                        Dont Have An Account?{' '}
-                        <Link href="/register" className="text-red-600 font-bold hover:underline">
-                            Register
-                        </Link>
-                    </p>
                 </div>
 
+                {/* Right Side: Login Form */}
+                <div className="w-full md:w-1/2 p-8 md:p-16 lg:p-20">
+                    <div className="mb-10">
+                        <h1 className="text-3xl font-black text-slate-900 mb-2">Welcome Back!</h1>
+                        <p className="text-slate-500 font-medium">Please enter your details to sign in.</p>
+                    </div>
 
-                <div className="space-y-2 mt-8">
-                    <button onClick={handleGoogleSignin} className="btn btn-outline btn-info w-full normal-case font-bold gap-2 text-blue-500 border-blue-400">
-                        <FaGoogle /> Login with Google
+                    <button className="w-full flex items-center justify-center gap-3 bg-white border border-slate-200 py-3.5 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all mb-8 shadow-sm">
+                        <FcGoogle size={24} />
+                        Continue with Google
                     </button>
-                    <button onClick={handleGithubSignin} className="btn btn-outline w-full normal-case font-bold gap-2 text-slate-700 border-slate-300">
-                        <FaGithub /> Login with Github
-                    </button>
+
+                    <div className="relative mb-8 text-center">
+                        <div className="absolute inset-0 flex items-center">
+                            <div className="w-full border-t border-slate-100"></div>
+                        </div>
+                        <span className="relative bg-white px-4 text-xs font-black text-slate-400 uppercase tracking-widest">Or login with email</span>
+                    </div>
+
+                    {/* Login Form */}
+                    <form onSubmit={handleLogin} className="space-y-5">
+                        <div>
+                            <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Email Address</label>
+                            <div className="relative">
+                                <input
+                                    type="email"
+                                    placeholder="name@example.com"
+                                    className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 text-slate-700 focus:outline-none focus:border-[#149988] focus:ring-1 focus:ring-[#149988] transition-all font-medium"
+                                    required
+                                />
+                                <HiOutlineMail className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className="flex justify-between items-center mb-2 ml-1">
+                                <label className="text-sm font-bold text-slate-700">Password</label>
+                                <Link href="#" className="text-xs font-bold text-[#149988] hover:underline">Forgot Password?</Link>
+                            </div>
+                            <div className="relative">
+                                <input
+                                    type="password"
+                                    placeholder="••••••••"
+                                    className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 text-slate-700 focus:outline-none focus:border-[#149988] focus:ring-1 focus:ring-[#149988] transition-all font-medium"
+                                    required
+                                />
+                                <HiOutlineLockClosed className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="w-full bg-[#149988] text-white py-4 rounded-2xl font-bold text-lg hover:bg-[#0f7d6f] hover:-translate-y-0.5 transition-all shadow-lg shadow-teal-900/10 mt-4"
+                        >
+                            Log In
+                        </button>
+                    </form>
+
+                    {/* Register Link */}
+                    <p className="text-center mt-10 text-slate-500 font-medium text-sm">
+                        Don't have an account?{' '}
+                        <Link href="/register" className="text-[#F97416] font-bold hover:underline">
+                            Register for free
+                        </Link>
+                    </p>
                 </div>
 
             </div>
