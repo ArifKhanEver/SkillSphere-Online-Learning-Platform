@@ -5,12 +5,45 @@ import Link from 'next/link';
 import { FcGoogle } from 'react-icons/fc';
 import { HiOutlineMail, HiOutlineLockClosed } from 'react-icons/hi';
 import { FaCheckCircle, FaPlayCircle, FaUserGraduate } from 'react-icons/fa';
+import { authClient } from '@/lib/auth-client';
+import { Flip, toast } from 'react-toastify';
+import { redirect } from 'next/navigation';
 
 const LoginPage = () => {
-    const handleLogin = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
 
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+
+        const { data, error } = await authClient.signIn.email({
+            email,
+            password,
+            callbackURL: "/"
+        }, {
+            onSuccess: (ctx) => {
+                toast.success('Sign In successful', {
+                    theme: 'colored',
+                    transition: Flip
+                });
+                redirect('/')
+            },
+            onError: (ctx) => {
+                // display the error message
+                toast.warning(ctx.error.message, {
+                    theme: 'colored',
+                    transition: Flip
+                });
+            },
+        });
+
     };
+
+    const handleGoogleSignin = async() => {
+        await authClient.signIn.social({
+            provider: 'google',
+        })
+    }
 
     return (
         <div className="min-h-screen bg-[#FAF9F6] flex items-center justify-center py-20 px-6">
@@ -86,7 +119,7 @@ const LoginPage = () => {
                         <p className="text-slate-500 font-medium">Please enter your details to sign in.</p>
                     </div>
 
-                    <button className="w-full flex items-center justify-center gap-3 bg-white border border-slate-200 py-3.5 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all mb-8 shadow-sm">
+                    <button onClick={handleGoogleSignin} className="w-full flex items-center justify-center gap-3 bg-white border border-slate-200 py-3.5 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all mb-8 shadow-sm">
                         <FcGoogle size={24} />
                         Continue with Google
                     </button>
@@ -99,12 +132,13 @@ const LoginPage = () => {
                     </div>
 
                     {/* Login Form */}
-                    <form onSubmit={handleLogin} className="space-y-5">
+                    <form onSubmit={onSubmit} className="space-y-5">
                         <div>
                             <label className="block text-sm font-bold text-slate-700 mb-2 ml-1">Email Address</label>
                             <div className="relative">
                                 <input
                                     type="email"
+                                    name='email'
                                     placeholder="name@example.com"
                                     className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 text-slate-700 focus:outline-none focus:border-[#149988] focus:ring-1 focus:ring-[#149988] transition-all font-medium"
                                     required
@@ -121,7 +155,8 @@ const LoginPage = () => {
                             <div className="relative">
                                 <input
                                     type="password"
-                                    placeholder="••••••••"
+                                    name="password"
+                                    placeholder="Enter Your Password"
                                     className="w-full bg-slate-50 border border-slate-200 rounded-2xl py-4 pl-12 pr-4 text-slate-700 focus:outline-none focus:border-[#149988] focus:ring-1 focus:ring-[#149988] transition-all font-medium"
                                     required
                                 />

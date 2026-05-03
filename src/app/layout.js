@@ -1,5 +1,6 @@
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from "react-toastify";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning>
       <body className="min-h-full flex flex-col">
         <main>{children}</main>
+        <ToastContainer></ToastContainer>
       </body>
     </html>
   );
