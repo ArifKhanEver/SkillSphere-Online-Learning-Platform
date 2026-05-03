@@ -1,5 +1,6 @@
 import React from 'react';
 import { Lightbulb, Clock, BookOpen, Target, Zap } from 'lucide-react';
+import Link from 'next/link';
 
 const LearningTips = () => {
  
@@ -47,17 +48,17 @@ const LearningTips = () => {
   ];
 
   return (
-    <section id='technics' className="bg-[#FDF1EE] py-24 px-6 lg:px-20 relative overflow-hidden">
+    <section id='technics' className="bg-[#FDF1EE] py-14 px-6 lg:px-20 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-64 h-64 bg-white/40 rounded-full blur-3xl -mr-32 -mt-32"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-50 rounded-full blur-3xl -ml-48 -mb-48"></div>
 
       <div className="container mx-auto relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <span className="bg-[#FFEFE8] text-[#F97416] px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-4 inline-block">
             Learning Optimization
           </span>
-          <h2 className="text-4xl md:text-5xl font-[900] text-slate-900 leading-tight">
+          <h2 className="text-[28px] md:text-5xl font-[900] text-slate-900 leading-tight">
             Master Your Skills with <br />
             <span className="text-[#149988]">Expert Techniques</span>
           </h2>
@@ -106,9 +107,9 @@ const LearningTips = () => {
                 <p className="opacity-80 font-medium">Apply these strategies to achieve unparalleled progress in your journey.</p>
               </div>
            </div>
-           <button className="bg-white text-[#149988] px-8 py-4 rounded-2xl font-black text-sm hover:bg-slate-100 transition-all whitespace-nowrap active:scale-95">
+           <Link href={'/allcourses'} className="bg-white text-[#149988] px-8 py-4 rounded-2xl font-black text-sm hover:bg-slate-100 transition-all whitespace-nowrap active:scale-95">
               Explore More Resources
-           </button>
+           </Link>
         </div>
       </div>
     </section>

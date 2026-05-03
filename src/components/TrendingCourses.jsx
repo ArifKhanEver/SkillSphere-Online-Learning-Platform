@@ -13,10 +13,10 @@ import Link from "next/link";
 const TrendingCourses = () => {
 
   return (
-    <section className="py-20 bg-white px-6 lg:px-20">
+    <section className="py-14 bg-white px-6 lg:px-20">
       <div className="container mx-auto">
 
-        <div className="flex items-center justify-between mb-12">
+        <div className="flex items-center justify-between mb-8">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <FaFire className="text-[#F97416] animate-pulse" />
@@ -33,7 +33,7 @@ const TrendingCourses = () => {
           </Link>
         </div>
 
-        <div className="w-full py-10">
+        <div className="w-full">
           <Swiper
             spaceBetween={20}
             slidesPerView={1}

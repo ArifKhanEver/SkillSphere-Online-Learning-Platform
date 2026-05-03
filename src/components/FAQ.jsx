@@ -34,7 +34,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id='faq' className="bg-[#FCF9F8] py-24 px-6 lg:px-20 relative overflow-hidden">
+    <section id='faq' className="bg-[#FCF9F8] py-14 px-6 lg:px-20 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-[radial-gradient(circle,rgba(20,153,136,0.03)_0%,transparent_70%)] rounded-full -mt-40 -mr-40 pointer-events-none"></div>
 
       <div className="container mx-auto max-w-7xl relative z-10">

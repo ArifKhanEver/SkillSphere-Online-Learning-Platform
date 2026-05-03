@@ -46,11 +46,11 @@ const TopInstructors = () => {
   ];
 
   return (
-    <section id='instructors' className="bg-gray-100 py-24 px-6 lg:px-20 relative overflow-hidden">
+    <section id='instructors' className="bg-gray-100 py-14 px-6 lg:px-20 relative overflow-hidden">
       <div className="container mx-auto">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-6 gap-6">
           <div className="max-w-xl">
             <span className="text-[#F97416] font-black uppercase tracking-widest text-xs mb-3 block">
               World-Class Mentors
