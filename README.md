@@ -3,7 +3,7 @@
 SkillSphere is a modern online learning platform where users can explore diverse courses, watch professional lessons, and enroll in skill-based programs. From Web Development to Digital Marketing, SkillSphere provides a seamless and responsive experience for learners worldwide.
 
 ## 🚀 Live URL
-**Live Site:** https://skillsphere-online-learning-platform.vercel.app
+**Live Site:** https://skillsphere-online.vercel.app
 
 ## 📖 Project Purpose
 The goal of SkillSphere is to bridge the gap between industry experts and students. It offers a structured way to browse courses, view detailed curriculum, and manage user profiles, all within a secure and high-performance environment.
@@ -19,12 +19,13 @@ The goal of SkillSphere is to bridge the gap between industry experts and studen
 
 ## 🛠️ Tech Stack & Packages
 - **Framework:** Next.js (App Router)
-- **Styling:** Tailwind CSS, DaisyUI / HeroUI
+- **Styling:** Tailwind CSS, DaisyUI
 - **Authentication:** BetterAuth
 - **Icons:** React Icons
 - **Notifications:** React Toastify
-- **Animations:** Swiper.js / Framer Motion
+- **Animations:** Swiper.js
 - **Data Fetching:** Native Fetch API
+- **Database:** MongoDB
 
 ## 💻 Prerequisites
 Before running the project locally, ensure you have:

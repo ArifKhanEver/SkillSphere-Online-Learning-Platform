@@ -71,7 +71,6 @@ const TopInstructors = () => {
               key={index} 
               className="group bg-white border border-gray-300 rounded-2xl p-4 hover:shadow-2xl hover:shadow-teal-50 transition-all duration-500 hover:-translate-y-2"
             >
-              {/* Image Container */}
               <div className="relative w-full aspect-square mb-4 overflow-hidden rounded-2xl bg-slate-100">
                 <div className="w-full h-full relative">
                    <div className="absolute inset-0 bg-gradient-to-tr from-slate-200 to-slate-50 flex items-center justify-center text-slate-400 font-bold text-xs uppercase tracking-tighter text-center px-4">
@@ -87,7 +86,6 @@ const TopInstructors = () => {
                   
                 </div>
                 
-                {/* Overlay Social Icons */}
                 <div className="absolute inset-0 bg-[#149988]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
                    <a href={mentor.socials.linkedin} className="bg-white p-2.5 rounded-full text-[#149988] hover:bg-[#F97416] hover:text-white transition-all shadow-lg">
                      <FaLinkedinIn size={16} />
@@ -101,7 +99,6 @@ const TopInstructors = () => {
                 </div>
               </div>
 
-              {/* Text Content */}
               <div className="text-center">
                 <h3 className="text-xl font-black text-slate-900 group-hover:text-[#149988] transition-colors">
                   {mentor.name}
@@ -110,7 +107,6 @@ const TopInstructors = () => {
                   {mentor.role}
                 </p>
 
-                {/* Rating and Students Statistics */}
                 <div className="flex items-center justify-between gap-4 pt-1 px-1 border-t border-slate-50">
                   <div className="flex items-center gap-1">
                     <FaStar className="text-[#F97416]" size={12} />

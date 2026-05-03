@@ -16,7 +16,6 @@ const TrendingCourses = () => {
     <section className="py-20 bg-white px-6 lg:px-20">
       <div className="container mx-auto">
 
-        {/* Header with Fire Icon */}
         <div className="flex items-center justify-between mb-12">
           <div>
             <div className="flex items-center gap-2 mb-3">
@@ -34,7 +33,6 @@ const TrendingCourses = () => {
           </Link>
         </div>
 
-        {/* Courses animation */}
         <div className="w-full py-10">
           <Swiper
             spaceBetween={20}

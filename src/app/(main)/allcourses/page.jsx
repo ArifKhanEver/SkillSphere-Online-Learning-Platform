@@ -5,14 +5,11 @@ import React, { useState } from 'react';
 import { FaSearch, FaFilter, FaStar, FaRegClock } from 'react-icons/fa';
 
 const AllCourses = () => {
-  // State for filtering and searching
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Categories for the filter menu
   const categories = ['All', 'Development', 'Design', 'Marketing', 'Business'];
 
-  // Filtering Logic
   const filteredCourses = allCoursesData.filter(course => {
     const matchesCategory = activeCategory === 'All' || course.category === activeCategory;
     const matchesSearch = course.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -22,9 +19,8 @@ const AllCourses = () => {
   return (
     <div className="bg-[#FAF9F6] min-h-screen pb-24">
       
-      {/* Page Header Area */}
       <div className="bg-[#149988] pt-32 pb-20 px-6 lg:px-20 text-center relative overflow-hidden">
-        {/* Decorative background elements */}
+
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#F97416]/20 rounded-full blur-3xl -ml-20 -mb-20"></div>
         
@@ -39,11 +35,8 @@ const AllCourses = () => {
       </div>
 
       <div className="container mx-auto px-6 lg:px-20 -mt-8 relative z-20">
-        
-        {/* Search and Filter Section */}
         <div className="bg-white rounded-[24px] p-4 md:p-6 shadow-xl shadow-slate-200/50 flex flex-col md:flex-row items-center justify-between gap-6 mb-12">
           
-          {/* Search Bar */}
           <div className="relative w-full md:w-1/3">
             <input 
               type="text" 
@@ -55,7 +48,6 @@ const AllCourses = () => {
             <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
           </div>
 
-          {/* Category Pills */}
           <div className="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 hide-scrollbar">
             <FaFilter className="text-slate-400 mr-2 flex-shrink-0" />
             {categories.map((category) => (
@@ -74,7 +66,6 @@ const AllCourses = () => {
           </div>
         </div>
 
-        {/* Courses Grid */}
         {filteredCourses.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {filteredCourses.map((course,index) => (
@@ -82,7 +73,6 @@ const AllCourses = () => {
             ))}
           </div>
         ) : (
-          /* Empty State when search/filter yields no results */
           <div className="text-center py-20">
             <h3 className="text-2xl font-bold text-slate-700 mb-2">No courses found</h3>
             <p className="text-slate-500">Try adjusting your search or filter criteria.</p>

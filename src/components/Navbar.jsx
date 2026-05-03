@@ -11,7 +11,7 @@ const Navbar = () => {
   const pathname = usePathname()
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Our Courses', href: '/allcourses' },
+    { name: 'Courses', href: '/allcourses' },
     { name: 'Technics', href: '/#technics' },
     { name: 'Instructors', href: '/#instructors' },
     { name: 'FAQ', href: '/#faq' },
@@ -39,8 +39,8 @@ const Navbar = () => {
             )
           }
           {
-            user && <Link href='/profile' className={`${ pathname == '/profile' ? "text-[#fe6e38]" : 'text-black'} text-sm font-bold flex items-center gap-1`}>
-              <span>{ pathname == '/profile' && '*'}</span> Profile
+            user && <Link href='/profile' className={`${pathname == '/profile' ? "text-[#fe6e38]" : 'text-black'} text-sm font-bold flex items-center gap-1`}>
+              <span>{pathname == '/profile' && '*'}</span>My Profile
             </Link>
           }
 
@@ -63,14 +63,14 @@ const Navbar = () => {
                   </div>
 
                   <div className="w-9 h-9 md:w-10 md:h-10 rounded-full relative overflow-hidden border-2 border-[#149988]/20 p-0.5 group cursor-pointer">
-                    <div className="w-full h-full rounded-full overflow-hidden relative">
+                    <Link href='/profile' className="w-full h-full rounded-full overflow-hidden relative">
                       <Image
                         src={user.image}
                         alt={user.name}
                         fill
                         className="object-cover group-hover:scale-110 transition-transform duration-300"
                       />
-                    </div>
+                    </Link>
                   </div>
                 </div>
 
@@ -115,6 +115,12 @@ const Navbar = () => {
                 </li>
 
                 )
+              }
+
+              {
+                user && <Link href='/profile' className={`${pathname == '/profile' ? "text-[#fe6e38]" : 'text-black'} text-sm font-bold flex items-center gap-1`}>
+                  <span>{pathname == '/profile' && '*'}</span> Profile
+                </Link>
               }
             </ul>
           </div>

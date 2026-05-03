@@ -2,6 +2,7 @@
 import { FaStar, FaRegClock, FaUserGraduate, FaGlobe, FaCheckCircle, FaPlayCircle} from 'react-icons/fa';
 import { MdOutlineSignalCellularAlt } from 'react-icons/md';
 import courses from '@/lib/data.json'
+import Image from 'next/image';
 
 const CourseDetails = async({ params }) => {
 
@@ -10,7 +11,6 @@ const CourseDetails = async({ params }) => {
 
     // console.log(courseId)
 
-    // 3. Handle 404 (If course is not found)
     if (!course) {
         return (
             <div className="min-h-screen flex items-center justify-center bg-slate-50">
@@ -22,15 +22,12 @@ const CourseDetails = async({ params }) => {
         );
     }
 
-    // 4. Render the Course Details
     return (
         <div className="bg-[#FAF9F6] min-h-screen pb-24">
 
-            {/* Dynamic Hero Section */}
             <div className="bg-slate-900 pt-32 pb-40 px-6 lg:px-20 relative">
                 <div className="container mx-auto max-w-7xl relative z-10">
                     <div className="max-w-3xl">
-                        {/* Badges */}
                         <div className="flex items-center gap-3 mb-6">
                             <span className="bg-[#149988] text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 rounded-md">
                                 {course.category}
@@ -50,7 +47,6 @@ const CourseDetails = async({ params }) => {
                             {course.description}
                         </p>
 
-                        {/* Course Meta Info */}
                         <div className="flex flex-wrap items-center gap-6 text-slate-300 font-medium text-sm">
                             <div className="flex items-center gap-2">
                                 <FaStar className="text-[#F97416]" size={16} />
@@ -70,16 +66,13 @@ const CourseDetails = async({ params }) => {
                 </div>
             </div>
 
-            {/* Main Content Area */}
             <div className="container mx-auto max-w-7xl px-6 lg:px-20 -mt-24 relative z-20">
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
 
-                    {/* Left Column: Course Details */}
                     <div className="w-full lg:w-2/3">
                         <div className="bg-white rounded-[32px] p-8 md:p-10 shadow-xl shadow-slate-200/50 mb-8 border border-slate-100">
                             <h2 className="text-2xl font-bold text-slate-900 mb-6">What you'll learn</h2>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {/* Mocking learning outcomes to make the design look complete */}
                                 {[
                                     "Build a sustainable content strategy",
                                     "Understand different social media algorithms",
@@ -94,7 +87,6 @@ const CourseDetails = async({ params }) => {
                             </div>
                         </div>
 
-                        {/* Course Content / Curriculum (Mock Section) */}
                         <div className="bg-white rounded-[32px] p-8 md:p-10 shadow-xl shadow-slate-200/50 border border-slate-100">
                             <h2 className="text-2xl font-bold text-slate-900 mb-6">Course Content</h2>
                             <div className="space-y-4">
@@ -108,22 +100,15 @@ const CourseDetails = async({ params }) => {
                                     </div>
                                     <span className="text-[#149988] font-bold text-sm bg-[#149988]/10 px-3 py-1 rounded-full">Preview</span>
                                 </div>
-                                {/* Add more curriculum items similarly as needed */}
                             </div>
                         </div>
                     </div>
 
-                    {/* Right Column: Sticky Pricing Card */}
+                    {/* Right Column */}
                     <div className="w-full lg:w-1/3">
-                        {/* 'sticky' keeps the card in view as user scrolls the left column */}
                         <div className="sticky top-24 bg-white rounded-[32px] overflow-hidden shadow-2xl shadow-slate-200 border border-slate-100">
-                            {/* Course Video/Image Preview */}
                             <div className="relative h-60 w-full bg-slate-200">
-                                <img
-                                    src={course.image}
-                                    alt={course.title}
-                                    className="w-full h-full object-cover"
-                                />
+                                <Image fill src={course.image} alt={course.title} className="w-full h-full object-cover"/>
                                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center group cursor-pointer transition-all hover:bg-black/20">
                                     <div className="bg-white/30 backdrop-blur-md p-4 rounded-full group-hover:scale-110 transition-transform">
                                         <FaPlayCircle className="text-white" size={40} />
@@ -131,7 +116,6 @@ const CourseDetails = async({ params }) => {
                                 </div>
                             </div>
 
-                            {/* Pricing & Actions */}
                             <div className="p-8">
                                 <div className="text-4xl font-black text-slate-900 mb-6">
                                     ${course.price}
@@ -148,7 +132,6 @@ const CourseDetails = async({ params }) => {
                                     30-Day Money-Back Guarantee
                                 </p>
 
-                                {/* Quick Info Specs */}
                                 <h4 className="font-bold text-slate-900 mb-4">This course includes:</h4>
                                 <div className="space-y-4">
                                     <div className="flex items-center gap-3 text-slate-600">
@@ -164,11 +147,9 @@ const CourseDetails = async({ params }) => {
                                         <span className="font-medium text-sm">Certificate of completion</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>

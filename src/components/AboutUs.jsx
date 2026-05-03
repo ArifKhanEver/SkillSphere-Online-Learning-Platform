@@ -3,7 +3,6 @@ import React from 'react';
 const AboutUs = () => {
     return (
         <section>
-            {/* Lower Stats Area - Pure White Background */}
             <div className="bg-white py-12 md:py-20 px-6 lg:px-20">
                 <div className="container mx-auto text-center">
                     <span className="text-[#D1FAE5] bg-[#1bb59f] px-5 py-1.5 rounded-full text-sm font-black mb-8 inline-block -rotate-12">
@@ -14,7 +13,6 @@ const AboutUs = () => {
                         We are passionate about empowering learners <span className="text-gray-500">Worldwide with high-quality, accessible & engaging education. Our mission offering a diverse range of courses.</span>
                     </h2>
 
-                    {/* Stats Flexbox */}
                     <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-6 md:gap-16 md:gap-14 border-t border-gray-100 pt-6">
                         <div className="flex gap-1 md:gap-3 items-center md:items-start">
                             <span className="text-5xl md:text-6xl font-[900] text-[#111827]">25+</span>

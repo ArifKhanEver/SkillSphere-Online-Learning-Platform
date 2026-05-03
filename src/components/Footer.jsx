@@ -24,8 +24,6 @@ const Footer = () => {
         
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
-          
-          {/* Column 1: Brand & Social (Spans 4 columns on large screens) */}
           <div className="lg:col-span-4 flex flex-col">
             <h2 className="text-2xl font-[900] text-slate-900 mb-6 tracking-tight">
               Skill<span className="text-[#fe6e38]">Sphere</span>.
@@ -67,11 +65,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2: Company Info (Spans 2 columns) */}
+          {/* Column 2*/}
           <div className="lg:col-span-2">
             <h3 className="text-lg font-bold text-slate-900 mb-6">Company Info</h3>
             <ul className="space-y-4">
-              {['Home', 'About Us', 'Courses', 'Mentors', 'Become Instructor', 'Contact Us', 'FAQ'].map((item, index) => (
+              {['Home', 'About Us', 'Courses', 'Mentors', 'Contact Us', 'Privacy policy','Terms & Conditions'].map((item, index) => (
                 <li key={index}>
                   <Link href="#" className="text-slate-500 font-medium hover:text-[#149988] transition-colors text-sm flex items-center gap-2">
                     {index === 0 && <span className="w-4 h-[1px] bg-[#149988] inline-block"></span>}
@@ -82,7 +80,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 3: Top Categories (Spans 2 columns) */}
+          {/* Column 3 */}
           <div className="lg:col-span-2">
             <h3 className="text-lg font-bold text-slate-900 mb-6">Top Categories</h3>
             <ul className="space-y-4">
@@ -96,7 +94,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Column 4: Download App & Contact (Spans 4 columns) */}
+          {/* Column 4*/}
           <div className="lg:col-span-4 flex flex-col">
             <h3 className="text-lg font-bold text-slate-900 mb-6">Download the LMS App</h3>
             <p className="text-slate-500 font-medium text-sm leading-relaxed mb-6 pr-4">
@@ -136,7 +134,7 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Copyright Bar */}
+        {/* Copyright */}
         <div className="border-t border-slate-200 pt-8 mt-8 flex flex-col md:flex-row items-center justify-center text-center">
           <p className="text-slate-500 text-sm font-medium">
             © 2026 SkillSphere. All rights reserved.

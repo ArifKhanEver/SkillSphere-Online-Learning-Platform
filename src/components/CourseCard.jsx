@@ -8,12 +8,10 @@ const CourseCard = ({ course }) => {
 
     return (
         <div>
-
             <div key={course.id} className="group relative bg-[#F9FAFB] rounded-[24px] p-1.5 border border-gray-200 hover:border-[#149988]/20 hover:bg-white hover:shadow-xl transition-all duration-500 flex flex-col h-full">
 
-                {/* Course Image with Tag */}
                 <div className="relative h-40 w-full bg-slate-200 rounded-[18px] overflow-hidden mb-3">
-                    <img
+                    <Image fill
                         src={course.image}
                         alt={course.title}
                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

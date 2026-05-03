@@ -15,7 +15,7 @@ const CourseSection = () => {
     <section className="bg-gray-100 py-20 px-6 lg:px-20">
       <div className="container mx-auto">
 
-        {/* Section Header: Title and Search/Filter Bar */}
+        {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
           <div>
             <span className="bg-[#F97416] text-white px-6 py-1 rounded-full text-sm font-bold tracking-wider mb-5 inline-block -rotate-12">
@@ -49,14 +49,14 @@ const CourseSection = () => {
             breakpoints={{
               640: { slidesPerView: 1 },
               768: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 }, // ডেস্কটপে ৩টি কার্ড দেখাবে
+              1024: { slidesPerView: 3 }, 
             }}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper !pb-12" // Pagination এর জন্য নিচে একটু প্যাডিং
+            className="mySwiper !pb-12" 
           >
             {courses.map((course) => (
               <SwiperSlide key={course.id}>
-                <CourseCard course={course} />
+                <CourseCard course={course}></CourseCard>
               </SwiperSlide>
             ))}
           </Swiper>

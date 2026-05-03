@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
@@ -36,13 +35,11 @@ const FAQ = () => {
 
   return (
     <section id='faq' className="bg-[#FCF9F8] py-24 px-6 lg:px-20 relative">
-      {/* Decorative background element */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[radial-gradient(circle,rgba(20,153,136,0.03)_0%,transparent_70%)] rounded-full -mt-40 -mr-40 pointer-events-none"></div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           
-          {/* Left Column: Heading and Contact Info */}
           <div className="lg:w-1/3 flex flex-col justify-start">
             <span className="text-[#F97416] bg-[#F97416]/10 px-4 py-1.5 rounded-full font-black uppercase tracking-widest text-[10px] mb-4 w-max">
               Testimonial & FAQ
@@ -55,7 +52,6 @@ const FAQ = () => {
               For any unanswered questions, reach out to our support team via email. We'll respond as soon as possible to assist you.
             </p>
             
-            {/* Quick Contact Card */}
             <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-4">
               <div className="bg-[#149988]/10 p-3 rounded-full text-[#149988]">
                 <HiOutlineMail size={24} />
@@ -92,10 +88,6 @@ const FAQ = () => {
                       </div>
                     </button>
 
-                    {/* 
-                      Smooth Accordion Animation using CSS Grid 
-                      When open, grid-template-rows is 1fr, otherwise 0fr
-                    */}
                     <div 
                       className={`grid transition-all duration-300 ease-in-out ${
                         isOpen ? 'grid-rows-[1fr] opacity-100 mb-4' : 'grid-rows-[0fr] opacity-0'

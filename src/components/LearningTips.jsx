@@ -2,15 +2,12 @@ import React from 'react';
 import { Lightbulb, Clock, BookOpen, Target, Zap } from 'lucide-react';
 
 const LearningTips = () => {
-  /**
-   * Static data for study and time management tips.
-   * You can easily move this to a separate config file later.
-   */
+ 
   const tipsData = [
     {
       category: "Study Techniques",
       icon: <BookOpen className="text-white w-6 h-6" />,
-      accentColor: "bg-[#21C55D]", // Theme Green
+      accentColor: "bg-[#21C55D]",
       bulletColor: "bg-[#21C55D]",
       tips: [
         { 
@@ -30,7 +27,7 @@ const LearningTips = () => {
     {
       category: "Time Management",
       icon: <Clock className="text-white w-6 h-6" />,
-      accentColor: "bg-[#F97416]", // Theme Orange
+      accentColor: "bg-[#F97416]",
       bulletColor: "bg-[#F97416]",
       tips: [
         { 
@@ -51,7 +48,6 @@ const LearningTips = () => {
 
   return (
     <section id='technics' className="bg-[#FDF1EE] py-24 px-6 lg:px-20 relative overflow-hidden">
-      {/* Visual Accents - Abstract circles matching the original design theme */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-white/40 rounded-full blur-3xl -mr-32 -mt-32"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-50 rounded-full blur-3xl -ml-48 -mb-48"></div>
 
@@ -67,14 +63,12 @@ const LearningTips = () => {
           </h2>
         </div>
 
-        {/* Tips Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           {tipsData.map((section, index) => (
             <div 
               key={index} 
               className="bg-white p-8 md:p-12 rounded-[40px] shadow-sm border border-orange-50 hover:shadow-xl transition-all duration-500 group"
             >
-              {/* Category Branding */}
               <div className="flex items-center gap-4 mb-10">
                 <div className={`${section.accentColor} p-4 rounded-2xl shadow-lg group-hover:scale-110 transition-transform`}>
                   {section.icon}
@@ -82,7 +76,6 @@ const LearningTips = () => {
                 <h3 className="text-2xl font-black text-slate-900">{section.category}</h3>
               </div>
 
-              {/* Individual Tips List */}
               <div className="space-y-8">
                 {section.tips.map((tip, i) => (
                   <div key={i} className="flex gap-5">

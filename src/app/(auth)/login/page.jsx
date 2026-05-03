@@ -56,15 +56,15 @@ const LoginPage = () => {
                     <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F97416]/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
 
                     <div className="relative z-10">
-                        <h2 className="text-4xl font-black text-white mb-4 tracking-tighter">
+                        <Link href='/' className="text-4xl font-black text-white mb-4 tracking-tighter">
                             Skill<span className="text-[#F97416]">Sphere</span>.
-                        </h2>
-                        <p className="text-teal-50 text-lg font-medium opacity-90 max-w-sm">
+                        </Link>
+                        <p className="text-teal-50 text-lg font-medium opacity-90 max-w-sm mt-4">
                             Elevate your career with the most in-demand technical skills.
                         </p>
                     </div>
 
-                    <div className="relative z-10 space-y-8 my-10">
+                    <div className="relative z-10 space-y-13 my-10">
                         <div className="flex items-center gap-5 group">
                             <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/20 group-hover:bg-[#F97416] transition-all duration-300">
                                 <FaPlayCircle className="text-white" size={24} />
@@ -166,7 +166,7 @@ const LoginPage = () => {
 
                         <button
                             type="submit"
-                            className="w-full bg-[#149988] text-white py-4 rounded-2xl font-bold text-lg hover:bg-[#0f7d6f] hover:-translate-y-0.5 transition-all shadow-lg shadow-teal-900/10 mt-4"
+                            className="w-full bg-[#149988] text-white py-4 rounded-2xl font-bold text-lg hover:bg-[#0f7d6f] hover:-translate-y-0.5 transition-all shadow-lg shadow-teal-900/10 mt-4 cursor-pointer"
                         >
                             Log In
                         </button>

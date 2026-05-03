@@ -6,6 +6,7 @@ import { FaPlayCircle, FaCheckCircle, FaUserGraduate } from 'react-icons/fa';
 import { authClient } from '@/lib/auth-client';
 import { Flip, toast } from 'react-toastify';
 import { redirect } from 'next/navigation';
+import { User } from 'lucide-react';
 
 const RegisterPage = () => {
     const onSubmit = async (e) => {
@@ -30,7 +31,6 @@ const RegisterPage = () => {
                 redirect('/')
             },
             onError: (ctx) => {
-                // display the error message
                 toast.warning(ctx.error.message, {
                     theme: 'colored',
                     transition: Flip
@@ -56,15 +56,15 @@ const RegisterPage = () => {
                     <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F97416]/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
 
                     <div className="relative z-10">
-                        <h2 className="text-4xl font-black text-white mb-4 tracking-tighter">
+                        <Link href='/' className="text-4xl font-black text-white mb-4 tracking-tighter">
                             Skill<span className="text-[#F97416]">Sphere</span>.
-                        </h2>
-                        <p className="text-teal-50 text-lg font-medium opacity-90 max-w-sm">
+                        </Link>
+                        <p className="text-teal-50 text-lg font-medium mt-6 opacity-90 max-w-sm">
                             Start your journey today and join thousands of learners worldwide.
                         </p>
                     </div>
 
-                    <div className="relative z-10 space-y-8 my-6">
+                    <div className="relative z-10 space-y-13 my-6">
                         <div className="flex items-center gap-5 group">
                             <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/20 group-hover:bg-[#F97416] transition-all duration-300">
                                 <FaPlayCircle className="text-white" size={24} />
@@ -89,13 +89,6 @@ const RegisterPage = () => {
                     <div className="relative z-10 pt-8 border-t border-white/10">
                         <p className="text-white/90 font-bold mb-4 italic">"Invest in yourself, it pays the best interest."</p>
                         <div className="flex items-center gap-4">
-                            <div className="flex -space-x-3">
-                                {[5, 6, 7, 8].map((i) => (
-                                    <div key={i} className="w-8 h-8 rounded-full border-2 border-[#149988] bg-slate-200 overflow-hidden">
-                                        <img src={`https://i.pravatar.cc/150?u=${i}`} alt="user" />
-                                    </div>
-                                ))}
-                            </div>
                             <p className="text-white/80 text-xs font-bold">Over 20k students already joined!</p>
                         </div>
                     </div>
@@ -122,7 +115,6 @@ const RegisterPage = () => {
 
                     {/* Registration Form */}
                     <form onSubmit={onSubmit} className="space-y-4">
-                        {/* Name Field */}
                         <div>
                             <label className="block text-xs font-bold text-slate-700 mb-1.5 ml-1 uppercase">Full Name</label>
                             <div className="relative">
@@ -137,7 +129,6 @@ const RegisterPage = () => {
                             </div>
                         </div>
 
-                        {/* Email Field */}
                         <div>
                             <label className="block text-xs font-bold text-slate-700 mb-1.5 ml-1 uppercase">Email Address</label>
                             <div className="relative">
@@ -152,7 +143,6 @@ const RegisterPage = () => {
                             </div>
                         </div>
 
-                        {/* Photo URL Field */}
                         <div>
                             <label className="block text-xs font-bold text-slate-700 mb-1.5 ml-1 uppercase">Photo URL</label>
                             <div className="relative">
@@ -167,7 +157,6 @@ const RegisterPage = () => {
                             </div>
                         </div>
 
-                        {/* Password Field */}
                         <div>
                             <label className="block text-xs font-bold text-slate-700 mb-1.5 ml-1 uppercase">Password</label>
                             <div className="relative">
@@ -190,7 +179,6 @@ const RegisterPage = () => {
                         </button>
                     </form>
 
-                    {/* Login Link */}
                     <p className="text-center mt-8 text-slate-500 font-medium text-sm">
                         Already have an account?{' '}
                         <Link href="/login" className="text-[#F97416] font-bold hover:underline">
