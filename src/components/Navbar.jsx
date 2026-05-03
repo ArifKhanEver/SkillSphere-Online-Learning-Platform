@@ -107,10 +107,10 @@ const Navbar = () => {
             <label tabIndex={0} className="btn btn-ghost btn-circle text-[#D35400]">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
             </label>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52 text-gray-700">
+            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] px-2 py-6 shadow bg-white rounded-box w-52 text-gray-700 grid gap-2">
               {
                 navLinks.map((link, index) => <li key={index}>
-                  <Link href={link.href} className={`${link.href == pathname ? "text-[#fe6e38]" : 'text-black'} font-bold flex items-center gap-2`}>
+                  <Link href={link.href} className={`${link.href == pathname ? "text-[#fe6e38]" : 'text-black'} text-base font-semibold flex items-center gap-1`}>
                     <span>{link.href == pathname && '*'}</span> {link.name}
                   </Link>
                 </li>
@@ -120,7 +120,7 @@ const Navbar = () => {
 
               {
                 user && <li>
-                  <Link href='/profile' className={`${pathname == '/profile' ? "text-[#fe6e38]" : 'text-black'} text-sm font-bold flex items-center gap-1`}>
+                  <Link href='/profile' className={`${pathname == '/profile' ? "text-[#fe6e38]" : 'text-black'} text-base font-semibold flex items-center gap-1`}>
                     <span>{pathname == '/profile' && '*'}</span> Profile
                   </Link>
                 </li>
