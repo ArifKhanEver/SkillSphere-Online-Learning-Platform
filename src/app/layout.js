@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en" data-theme='light'
-      className={`${openSans.variable} h-full antialiased`}
+      className={`${openSans.className} h-full antialiased`}
       suppressHydrationWarning>
       <body className="min-h-full flex flex-col">
         <main>{children}</main>

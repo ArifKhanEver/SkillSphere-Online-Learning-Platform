@@ -5,10 +5,13 @@
     "instructor": "Dr. Angela Yu",
     "duration": "20 hours",
     "rating": 4.8,
+    "reviews": 1250,
+    "price": 49.99,
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch including HTML, CSS, JavaScript, and React.",
-    "image": "https://i.ibb.co/6R0p9fH/web-dev.jpg",
-    "category": "Development"
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=500&auto=format&fit=crop&q=60",
+    "category": "Development",
+    "tag": "Best Seller"
   },
   {
     "id": 2,
@@ -16,10 +19,13 @@
     "instructor": "Sarah Johnson",
     "duration": "15 hours",
     "rating": 4.9,
+    "reviews": 840,
+    "price": 39.99,
     "level": "Intermediate",
     "description": "Master the art of user interface design and prototyping using Figma and Adobe XD.",
-    "image": "https://i.ibb.co/mS6X6nB/ui-ux.jpg",
-    "category": "Design"
+    "image": "https://images.unsplash.com/photo-1576153192396-180ecef2a715?w=500&auto=format&fit=crop&q=60",
+    "category": "Design",
+    "tag": "Trending"
   },
   {
     "id": 3,
@@ -27,10 +33,13 @@
     "instructor": "Robert Smith",
     "duration": "12 hours",
     "rating": 4.7,
+    "reviews": 2100,
+    "price": 29.99,
     "level": "Beginner",
     "description": "Social Media Marketing, SEO, and Google Ads strategies for business growth.",
-    "image": "https://i.ibb.co/L5hY8mG/digital-marketing.jpg",
-    "category": "Marketing"
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&auto=format&fit=crop&q=60",
+    "category": "Marketing",
+    "tag": "New Release"
   },
   {
     "id": 4,
@@ -38,10 +47,13 @@
     "instructor": "Maximilian Schwarzmüller",
     "duration": "25 hours",
     "rating": 4.9,
+    "reviews": 3200,
+    "price": 59.99,
     "level": "Advanced",
     "description": "Deep dive into React Hooks, Context API, and Server-Side Rendering with Next.js.",
-    "image": "https://i.ibb.co/vYf9z4m/nextjs.jpg",
-    "category": "Development"
+    "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&auto=format&fit=crop&q=60",
+    "category": "Development",
+    "tag": "Trending"
   },
   {
     "id": 5,
@@ -49,10 +61,13 @@
     "instructor": "Jose Portilla",
     "duration": "18 hours",
     "rating": 4.6,
+    "reviews": 1500,
+    "price": 44.99,
     "level": "Intermediate",
     "description": "Learn Python libraries like NumPy, Pandas, and Matplotlib for data analysis.",
-    "image": "https://i.ibb.co/ZxbT4f7/python-data.jpg",
-    "category": "Data Science"
+    "image": "https://images.unsplash.com/photo-1649180556628-9ba704115795?w=500&auto=format&fit=crop&q=60",
+    "category": "Data Science",
+    "tag": "Trending"
   },
   {
     "id": 6,
@@ -60,10 +75,13 @@
     "instructor": "Lindsay Marsh",
     "duration": "10 hours",
     "rating": 4.5,
+    "reviews": 950,
+    "price": 24.99,
     "level": "Beginner",
     "description": "Learn the principles of graphic design, typography, and color theory using Photoshop.",
-    "image": "https://i.ibb.co/nC8F6M1/graphic-design.jpg",
-    "category": "Design"
+    "image": "https://images.unsplash.com/photo-1626785774625-ddcddc3445e9?w=500&auto=format&fit=crop&q=60",
+    "category": "Design",
+    "tag": "New Release"
   },
   {
     "id": 7,
@@ -71,10 +89,13 @@
     "instructor": "Andrew Mead",
     "duration": "22 hours",
     "rating": 4.8,
+    "reviews": 1800,
+    "price": 54.99,
     "level": "Advanced",
     "description": "Build scalable backend applications using Express, Node.js, and MongoDB.",
-    "image": "https://i.ibb.co/X7P6Z5B/backend.jpg",
-    "category": "Development"
+    "image": "https://images.unsplash.com/photo-1658204238967-3a81a063d162?w=500&auto=format&fit=crop&q=60",
+    "category": "Development",
+    "tag": "Trending"
   },
   {
     "id": 8,
@@ -82,10 +103,13 @@
     "instructor": "Gary Vaynerchuk",
     "duration": "8 hours",
     "rating": 4.4,
+    "reviews": 600,
+    "price": 19.99,
     "level": "Beginner",
     "description": "Learn how to create viral content for TikTok, Instagram, and LinkedIn.",
-    "image": "https://i.ibb.co/R2vK9Yq/social-media.jpg",
-    "category": "Marketing"
+    "image": "https://images.unsplash.com/photo-1683721003111-070bcc053d8b?w=500&auto=format&fit=crop&q=60",
+    "category": "Marketing",
+    "tag": "New Release"
   },
   {
     "id": 9,
@@ -93,10 +117,13 @@
     "instructor": "Nathan House",
     "duration": "14 hours",
     "rating": 4.7,
+    "reviews": 1100,
+    "price": 49.99,
     "level": "Beginner",
     "description": "An introduction to protecting systems, networks, and programs from digital attacks.",
-    "image": "https://i.ibb.co/QvL0M8S/cyber-security.jpg",
-    "category": "IT & Software"
+    "image": "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=500&auto=format&fit=crop&q=60",
+    "category": "IT & Software",
+    "tag": "Trending"
   },
   {
     "id": 10,
@@ -104,9 +131,12 @@
     "instructor": "Seth Godin",
     "duration": "6 hours",
     "rating": 4.9,
+    "reviews": 4500,
+    "price": 14.99,
     "level": "Beginner",
     "description": "Step-by-step guide to starting your freelance journey on Upwork and Fiverr.",
-    "image": "https://i.ibb.co/S3J1X7D/freelancing.jpg",
-    "category": "Business"
+    "image": "https://images.unsplash.com/photo-1546514714-df0ccc50d7bf?w=500&auto=format&fit=crop&q=60",
+    "category": "Business",
+    "tag": "Best Seller"
   }
 ]
