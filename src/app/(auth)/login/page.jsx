@@ -119,7 +119,7 @@ const LoginPage = () => {
                         <p className="text-slate-500 font-medium">Please enter your details to sign in.</p>
                     </div>
 
-                    <button onClick={handleGoogleSignin} className="w-full flex items-center justify-center gap-3 bg-white border border-slate-200 py-3.5 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all mb-8 shadow-sm">
+                    <button onClick={handleGoogleSignin} className="w-full flex items-center justify-center gap-3 bg-white border border-slate-200 py-3.5 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all mb-8 shadow-sm cursor-pointer">
                         <FcGoogle size={24} />
                         Continue with Google
                     </button>

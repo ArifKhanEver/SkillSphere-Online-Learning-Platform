@@ -108,7 +108,7 @@ const RegisterPage = () => {
                         <p className="text-slate-500 font-medium text-sm">Join us and start mastering new skills.</p>
                     </div>
 
-                    <button onClick={handleGoogleSignin} className="w-full flex items-center justify-center gap-3 bg-white border border-slate-200 py-3 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all mb-6 shadow-sm">
+                    <button onClick={handleGoogleSignin} className="w-full flex items-center justify-center gap-3 bg-white border border-slate-200 py-3 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all mb-6 shadow-sm cursor-pointer">
                         <FcGoogle size={22} />
                         Sign up with Google
                     </button>
