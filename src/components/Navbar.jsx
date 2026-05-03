@@ -54,19 +54,20 @@ const Navbar = () => {
               <div className="flex items-center gap-3 md:gap-5 bg-white/50 backdrop-blur-md p-1.5 pr-2 md:pr-3 rounded-full border border-slate-100 shadow-sm">
                 <div className="flex items-center gap-2 pl-2">
                   <div className="hidden md:block text-right">
-                    <h5 className="text-sm font-black text-slate-900 leading-none capitalize">
-                      {user.name}
-                    </h5>
                     <p className="text-[10px] font-bold text-[#149988] uppercase tracking-tighter">
                       Student
                     </p>
+                    <h5 className="text-sm font-black text-slate-900 leading-none capitalize">
+                      {user.name}
+                    </h5>
                   </div>
 
                   <div className="w-9 h-9 md:w-10 md:h-10 rounded-full relative overflow-hidden border-2 border-[#149988]/20 p-0.5 group cursor-pointer">
                     <Link href='/profile' className="w-full h-full rounded-full overflow-hidden relative">
-                      <img
+                      <Image
                         src={user.image}
                         alt={user.name}
+                        fill
                         className="object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                     </Link>
