@@ -1,6 +1,4 @@
 "use client";
-
-import React from 'react';
 import Link from 'next/link';
 import { FcGoogle } from 'react-icons/fc';
 import { HiOutlineMail, HiOutlineLockClosed, HiOutlineUser, HiOutlinePhotograph } from 'react-icons/hi';
@@ -9,14 +7,13 @@ import { FaPlayCircle, FaCheckCircle, FaUserGraduate } from 'react-icons/fa';
 const RegisterPage = () => {
   const handleRegister = (e) => {
     e.preventDefault();
-    // Registration logic goes here
   };
 
   return (
     <div className="min-h-screen bg-[#FAF9F6] flex items-center justify-center py-20 px-6">
       <div className="max-w-[1100px] w-full bg-white rounded-[40px] shadow-2xl shadow-slate-200/60 overflow-hidden flex flex-col md:flex-row border border-slate-100">
         
-        {/* Left Side: Visual/Branding (Consistent with Login) */}
+        {/* Left Side*/}
         <div className="hidden md:flex md:w-1/2 bg-[#149988] p-12 flex-col justify-between relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -mr-32 -mt-32 blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F97416]/10 rounded-full -ml-32 -mb-32 blur-3xl"></div>
@@ -30,7 +27,6 @@ const RegisterPage = () => {
             </p>
           </div>
 
-          {/* Features to fill space */}
           <div className="relative z-10 space-y-8 my-6">
             <div className="flex items-center gap-5 group">
               <div className="w-12 h-12 bg-white/10 rounded-2xl flex items-center justify-center border border-white/20 group-hover:bg-[#F97416] transition-all duration-300">
@@ -68,14 +64,13 @@ const RegisterPage = () => {
           </div>
         </div>
 
-        {/* Right Side: Registration Form */}
+        {/* Right Side */}
         <div className="w-full md:w-1/2 p-8 md:p-12 lg:p-16 overflow-y-auto max-h-[90vh] md:max-h-full">
           <div className="mb-8">
             <h1 className="text-3xl font-black text-slate-900 mb-2">Create Account</h1>
             <p className="text-slate-500 font-medium text-sm">Join us and start mastering new skills.</p>
           </div>
 
-          {/* Social Login */}
           <button className="w-full flex items-center justify-center gap-3 bg-white border border-slate-200 py-3 rounded-2xl font-bold text-slate-700 hover:bg-slate-50 hover:border-slate-300 transition-all mb-6 shadow-sm">
             <FcGoogle size={22} />
             Sign up with Google
