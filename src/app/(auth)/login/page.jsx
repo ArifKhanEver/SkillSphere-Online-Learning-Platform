@@ -98,13 +98,6 @@ const LoginPage = () => {
 
                     <div className="relative z-10 pt-10 border-t border-white/10">
                         <div className="flex items-center gap-4">
-                            <div className="flex -space-x-3">
-                                {[1, 2, 3, 4].map((i) => (
-                                    <div key={i} className="w-8 h-8 rounded-full border-2 border-[#149988] bg-slate-200 overflow-hidden">
-                                        <img src={`https://i.pravatar.cc/150?u=${i}`} alt="user" />
-                                    </div>
-                                ))}
-                            </div>
                             <p className="text-white/80 text-xs font-bold">
                                 Joined by <span className="text-[#F97416]">20k+</span> students
                             </p>
