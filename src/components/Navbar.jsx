@@ -39,8 +39,8 @@ const Navbar = () => {
             )
           }
           {
-            user && <Link href='/profile' className={`${ pathname == 'profile' ? "text-[#fe6e38]" : 'text-black'} text-sm font-bold flex items-center gap-1`}>
-              <span>{ pathname == 'profile' && '*'}</span> Profile
+            user && <Link href='/profile' className={`${ pathname == '/profile' ? "text-[#fe6e38]" : 'text-black'} text-sm font-bold flex items-center gap-1`}>
+              <span>{ pathname == '/profile' && '*'}</span> Profile
             </Link>
           }
 
