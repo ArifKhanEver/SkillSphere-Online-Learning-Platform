@@ -110,7 +110,7 @@ const Navbar = () => {
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52 text-gray-700">
               {
                 navLinks.map((link, index) => <li key={index}>
-                  <Link href={link.href} className={`${link.href == pathname ? "text-[#fe6e38]" : 'text-black'} text-sm font-bold flex items-center gap-1`}>
+                  <Link href={link.href} className={`${link.href == pathname ? "text-[#fe6e38]" : 'text-black'} font-bold flex items-center gap-2`}>
                     <span>{link.href == pathname && '*'}</span> {link.name}
                   </Link>
                 </li>
@@ -119,9 +119,11 @@ const Navbar = () => {
               }
 
               {
-                user && <Link href='/profile' className={`${pathname == '/profile' ? "text-[#fe6e38]" : 'text-black'} text-sm font-bold flex items-center gap-1`}>
-                  <span>{pathname == '/profile' && '*'}</span> Profile
-                </Link>
+                user && <li>
+                  <Link href='/profile' className={`${pathname == '/profile' ? "text-[#fe6e38]" : 'text-black'} text-sm font-bold flex items-center gap-1`}>
+                    <span>{pathname == '/profile' && '*'}</span> Profile
+                  </Link>
+                </li>
               }
             </ul>
           </div>
