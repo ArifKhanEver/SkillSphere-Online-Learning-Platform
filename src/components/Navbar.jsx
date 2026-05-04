@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
-  const userData = authClient.useSession()
-  const user = userData.data?.user;
+  const {isPending, data} = authClient.useSession()
+  const user = data?.user;
 
   const pathname = usePathname()
   const navLinks = [
@@ -50,7 +50,7 @@ const Navbar = () => {
         <div className="flex items-center gap-0.5 md:gap-2">
 
           {
-            user ?
+            isPending? <span className="loading loading-dots loading-lg text-[#149988]"></span> : user ?
               <div className="flex items-center gap-3 md:gap-5 bg-white/50 backdrop-blur-md p-1.5 pr-2 md:pr-3 rounded-full border border-slate-100 shadow-sm">
                 <div className="flex items-center gap-2 pl-2">
                   <div className="hidden md:block text-right">

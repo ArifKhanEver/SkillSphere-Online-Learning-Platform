@@ -28,7 +28,8 @@ const RegisterPage = () => {
                     theme: 'colored',
                     transition: Flip
                 });
-                redirect('/')
+                authClient.signOut();
+                redirect('/login')
             },
             onError: (ctx) => {
                 toast.warning(ctx.error.message, {
